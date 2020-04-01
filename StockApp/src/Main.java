@@ -1,8 +1,6 @@
-//import java.util.Currency;
 import java.math.BigDecimal; 
 public class Main {
 	
-	//@SuppressWarnings("null")
 	public static void main(String[] args)
 	{
 		BigDecimal price1 = new BigDecimal(33.25);
@@ -38,7 +36,6 @@ public class Main {
 		
 		System.out.println("\nNew sell: ");
 		store1.getCashRegister(1).startNewSell();
-		//System.out.println(store1.getCashRegister(1).getFiscalIdentifier());
 		System.out.println("Price of '" + product2.getName() + "': "+  store1.getSeller(1).sell(product2, 33, "JPY",stoc1, store1.getCashRegister(1)) + " " + store1.getCashRegister(1).getCurrency(0));
 		System.out.println("Price of '" + product3.getName() + "': "+  store1.getSeller(1).sell(product3, 70, "JPY",stoc1, store1.getCashRegister(1)) + " " + store1.getCashRegister(1).getCurrency(0));
 		System.out.println("Price of '" + product3.getName() + "': "+  store1.getSeller(1).sell(product1, 10, "JPY",stoc1, store1.getCashRegister(1)) + " " + store1.getCashRegister(1).getCurrency(0));
@@ -48,6 +45,5 @@ public class Main {
 		System.out.print("\nThe stock of '" +product1.getName()+"' after both sells :"+ store1.getSeller(1).checkProductsStock(product1, stoc1));
 		store1.getSeller(1).returnProducts(product1, stoc1, store1.getCashRegister(1));
 		System.out.print("\nThe stock of '" +product1.getName()+"' after return items from the second sell :" + store1.getSeller(1).checkProductsStock(product1, stoc1));
-		//System.out.print(stoc1.getProductsStock(product2));
 	} 
 }
